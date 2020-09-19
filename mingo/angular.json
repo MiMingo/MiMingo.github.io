@@ -121,8 +121,18 @@
               "devServerTarget": "mingo:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "cname": "mingo.ooo"
+          }
         }
       }
-    }},
-  "defaultProject": "mingo"
+    }
+  },
+  "defaultProject": "mingo",
+  "cli": {
+    "analytics": "f2cda655-7120-4f8f-a374-d7aef0761713"
+  }
 }
