@@ -13,11 +13,13 @@ export class MainComponent implements OnInit {
     let time = 0;
     let x = 50;
     let y = 50;
+    const primary = 'rgba(28,65,115)';
+    const secondary = 'rgba(229,85,83)';
     setInterval(() => {
       time = time + .5 % 360;
       if (Math.floor(Math.random() * 1000) % 300 === 0) { x = Math.random() * 100; }
       if (Math.floor(Math.random() * 1000) % 650 === 0) { y = Math.random() * 100; }
-      this.renderer.setStyle(this.el.nativeElement, 'background', `conic-gradient(from ${time}deg at ${x}% ${y}%, #2c2c54, #b33939`);
+      this.renderer.setStyle(this.el.nativeElement, 'background', `conic-gradient(from ${time}deg at ${x}% ${y}%, ${primary}, ${secondary}`);
     }, 10);
   }
 
